@@ -1,0 +1,11 @@
+package com.delcastillo.appregister
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+
+class FireDetected : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_fire_detected)
+    }
+}

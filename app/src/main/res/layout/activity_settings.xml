@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    >
+
+    <TextView
+        android:id="@+id/houseSafeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="20dp"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:paddingLeft="30dp"
+        android:textColorHint="@color/black"
+        android:background="@drawable/button1"
+        android:text="Change Password"
+        android:layout_gravity="center"
+        android:drawableRight="@drawable/baseline_chevron_right_24"/>
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AlertGuard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FireDetected"
+    android:background="#715cf8">
+
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="131dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:text="Welcome,"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/SafeHouse"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/smart"
+        android:backgroundTintMode="multiply" />
+    <LinearLayout
+        android:id="@+id/aFireDetected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/white"/>
+    <TextView
+        android:id="@+id/houseSafeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fire Detected"
+        android:textColor="@color/red"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="450dp"/>
+
+    <TextView
+        android:id="@+id/noFireDetected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="on your house"
+        android:textColor="@color/red"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="480dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <Button
+
+            android:id="@+id/homeIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transpa"
+            android:clickable="true"
+            android:drawableTop="@drawable/ic_home"
+            android:onClick="onTextViewClicked" />
+
+        <Button
+            android:id="@+id/locationIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transpa"
+            android:clickable="true"
+            android:drawableTop="@drawable/ic_loc"
+            android:onClick="onTextViewClicked"/>
+
+
+        <Button
+            android:id="@+id/notificationIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transpa"
+            android:clickable="true"
+            android:drawableTop="@drawable/baseline_doorbell_24"
+            android:onClick="onTextViewClicked" />
+        <Button
+            android:id="@+id/profileIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transpa"
+            android:clickable="true"
+            android:drawableTop="@drawable/profile"
+            android:onClick="onTextViewClicked" />
+
+
+
+    </LinearLayout>
+/
+
+
+
+</RelativeLayout>
