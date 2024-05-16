@@ -82,19 +82,20 @@
             android:paddingTop="15dp"/>
     </LinearLayout>
 
-    <EditText
+    <Button
         android:id="@+id/settingsprof"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_below="@+id/linearlayout1"
         android:layout_centerHorizontal="true"
+       android:backgroundTint="@color/transpa"
+        android:textColor="@color/black"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:text="SETTINGS"
-        android:textColorHint="@color/black"
         android:textSize="15sp" />
 
-    <EditText
+    <Button
         android:layout_width="320dp"
         android:layout_height="50dp"
        android:layout_centerHorizontal="true"
@@ -102,8 +103,8 @@
         android:paddingLeft="20dp"
         android:layout_marginTop="30dp"
         android:textSize="15sp"
-        android:textColorHint="@color/black"
-        android:background="@drawable/gradient_background"
+        android:background="@color/gradient"
+        android:textColor="@color/black"
         android:text="LOG OUT "
         android:layout_gravity="center"/>
 

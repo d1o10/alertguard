@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red"> #ff3131</color>
     <color name="orange">#ff914d</color>
     <color name="transpa">#00FFFFFF</color>
+    <color name="gradient">#ff3131</color>
+
 </resources>

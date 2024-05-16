@@ -20,5 +20,11 @@ class Profile : AppCompatActivity() {
             val intent = Intent(this, EmergencyContact::class.java)
             startActivity(intent)
         }
+
+        val settingsbtn = findViewById<Button>(R.id.settingsprof)
+        settingsbtn.setOnClickListener {
+            val intent = Intent(this, Settings::class.java)
+            startActivity(intent)
+        }
     }
 }
