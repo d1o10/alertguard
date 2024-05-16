@@ -19,14 +19,14 @@
         android:layout_width="160dp"
         android:layout_height="130dp"
         android:src="@drawable/woman"
-        android:layout_marginStart="132dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
-        android:layout_marginStart="108dp"
+        android:layout_centerHorizontal="true"
         android:text="Jessalyn Sadili"
         android:textSize="30sp"
         android:textColor="@color/black"/>
@@ -35,38 +35,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
-        android:layout_marginStart="105dp"
+        android:layout_centerHorizontal="true"
         android:text="Phone: +639522334456"
         android:textSize="20sp"
         android:textColor="@color/black"/>
+
 
     <Button
         android:id="@+id/emergency_contacts"
         android:layout_width="320dp"
         android:layout_height="50dp"
+        android:layout_gravity="center"
         android:layout_marginStart="30dp"
         android:layout_marginTop="370dp"
-        android:textColorHint="@color/black"
-        android:textSize="15sp"
-        android:text="EMERGENCY CONTACTS"
-        android:textColor="@color/black"
-        android:drawableLeft="@drawable/baseline_emergency_24"
-        android:layout_gravity="center"
         android:background="@color/transpa"
         android:clickable="true"
+        android:drawableLeft="@drawable/baseline_emergency_24"
+        android:drawableRight="@drawable/baseline_chevron_right_24"
         android:onClick="onTextViewClicked"
-        android:drawableRight="@drawable/baseline_chevron_right_24"/>
-
-
+        android:text="EMERGENCY CONTACTS"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="15sp" />
 
     <LinearLayout
         android:layout_width="320dp"
         android:layout_height="50dp"
+        android:id="@+id/linearlayout1"
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
-        android:layout_marginTop="450dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginEnd="30dp"
-        android:paddingLeft="20dp">
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/emergency_contacts">
 
         <TextView
             android:layout_width="0dp"
@@ -84,22 +83,24 @@
     </LinearLayout>
 
     <EditText
+        android:id="@+id/settingsprof"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="530dp"
-        android:paddingLeft="20dp"
-        android:textSize="15sp"
-        android:textColorHint="@color/black"
+        android:layout_below="@+id/linearlayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
         android:text="SETTINGS"
-        android:layout_gravity="center"/>
+        android:textColorHint="@color/black"
+        android:textSize="15sp" />
 
     <EditText
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="620dp"
+       android:layout_centerHorizontal="true"
+        android:layout_below="@+id/settingsprof"
         android:paddingLeft="20dp"
+        android:layout_marginTop="30dp"
         android:textSize="15sp"
         android:textColorHint="@color/black"
         android:background="@drawable/gradient_background"
