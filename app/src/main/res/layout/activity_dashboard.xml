@@ -23,10 +23,12 @@
 
     <ImageView
         android:id="@+id/Woman"
-        android:layout_width="50dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="340dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@+id/welcomeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="150dp"
         android:src="@drawable/woman"
         />
 
