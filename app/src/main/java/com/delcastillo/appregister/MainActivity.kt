@@ -1,9 +1,9 @@
 package com.delcastillo.appregister
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,10 +20,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        val notifIcon = findViewById<Button>(R.id.getStarted)
-        notifIcon.setOnClickListener {
+        // Delay for 3 seconds (3000 milliseconds) and then start LoginSignupActivity
+        Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, LoginSignupActivity::class.java)
             startActivity(intent)
-        }
+            finish()  // Close the MainActivity
+        }, 3000)  // 3000 milliseconds delay
     }
-    }
+}

@@ -5,36 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:gravity="center"
+    android:background="#FFFF"
     tools:context=".MainActivity">
 
-    <!-- ImageView -->
+
+
     <ImageView
-        android:id="@+id/firefighting"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/firefighterfight"/>
+        android:id="@+id/logo"
+        android:layout_width="600dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/alertlogo"/>
 
 
-    <TextView
-        android:id="@+id/alertGuardText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AlertGuard"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:textColor="@color/white"/>
 
-    <!-- Button -->
-    <Button
-        android:id="@+id/getStarted"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="550dp"
-        android:textSize="25dp"
-        android:text="Get Started" />
 
 </RelativeLayout>

@@ -5,29 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginSignupActivity"
-    android:orientation="vertical"
-    android:background="@drawable/gradient_background">
-    <LinearLayout
-        android:layout_height="230dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal">
+    android:background="#FFFF"
+    android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="40dp"
-            android:src="@drawable/baseline_add_alert_24" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
-            android:text="AlertGuard"
-            android:textColor="@color/white"
-            android:textSize="30dp"
-            android:textStyle="bold" />
-    </LinearLayout>
+    <ImageView
+        android:layout_width="3000dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/alertlogo"
+        android:layout_gravity="center"/>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,7 +30,7 @@
             android:background="@drawable/button1"
             android:text="Log in"
             android:textAlignment="center"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="20dp" />
 
         <Button
@@ -50,10 +39,10 @@
             android:layout_height="50dp"
             android:layout_marginTop="50dp"
             android:textSize="20dp"
-            android:text="Register"
+            android:text=" Sign up"
             android:textAlignment="center"
             android:background="@drawable/button1"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </LinearLayout>

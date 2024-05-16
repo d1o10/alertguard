@@ -1,34 +1,163 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Settings"
     >
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transpa"
+        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
+        android:layout_marginTop="50dp"
+        android:paddingLeft="30dp"
+        />
     <TextView
-        android:id="@+id/houseSafeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Settings"
-        android:layout_marginTop="40dp"
-        android:paddingLeft="20dp"
-        android:textSize="25dp"
-        android:textAlignment="center"
         android:textColor="@color/black"
+        android:textSize="28dp"
+        android:gravity="center"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="105dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:layout_marginTop="120dp"
+        android:layout_marginStart="105dp"
         />
 
-    <EditText
+    <Button
+        android:id="@+id/EditProfilebtn"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="180dp"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        android:text="Edit Profile"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/profile"
+        android:layout_gravity="center"
+        android:background="@color/transpa"
+        android:clickable="true"
+        android:onClick="onTextViewClicked"
+        android:drawableRight="@drawable/baseline_chevron_right_24"/>
+
+    <Button
+        android:id="@+id/ChangePasswordbtn"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="240dp"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        android:text="Change Password"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/profile"
+        android:layout_gravity="center"
+        android:background="@color/transpa"
+        android:clickable="true"
+        android:onClick="onTextViewClicked"
+        android:drawableRight="@drawable/baseline_chevron_right_24"/>
+
+    <LinearLayout
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="100dp"
-        android:paddingLeft="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="295dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="30dp"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Enable Notifications"
+            android:color="@color/black"
+            android:textSize="20sp"
+            android:paddingTop="15dp"/>
+
+        <Switch
+            android:id="@+id/enablenotif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="360dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="30dp"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:id="@+id/enableloca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:color="@color/black"
+            android:paddingTop="15dp"
+            android:text="Enable Location"
+            android:textSize="20sp" />
+
+        <Switch
+            android:id="@+id/sms_notifications_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp" />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/helpSupport"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="420dp"
         android:textColorHint="@color/black"
-        android:background="@drawable/button1"
-        android:text="Change Password"
+        android:textSize="18sp"
+        android:text="Help and Support"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/profile"
         android:layout_gravity="center"
+        android:background="@color/transpa"
+        android:clickable="true"
+        android:onClick="onTextViewClicked"
         android:drawableRight="@drawable/baseline_chevron_right_24"/>
+
+    <Button
+        android:id="@+id/About"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="480dp"
+        android:textColorHint="@color/black"
+        android:textSize="18sp"
+        android:text="About"
+        android:textColor="@color/black"
+        android:drawableLeft="@drawable/profile"
+        android:layout_gravity="center"
+        android:background="@color/transpa"
+        android:clickable="true"
+        android:onClick="onTextViewClicked"
+        android:drawableRight="@drawable/baseline_chevron_right_24"/>
+
 
 </RelativeLayout>

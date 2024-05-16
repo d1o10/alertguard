@@ -4,8 +4,8 @@
     android:id="@+id/AlertGuard"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DashboardActivity"
-    android:background="#715cf8">
+    android:background="@color/white"
+    tools:context=".DashboardActivity">
 
 
 
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:background="@color/white">
+        android:background="@drawable/button3">
 
         <Button
 
