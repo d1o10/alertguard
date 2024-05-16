@@ -14,7 +14,7 @@ class DashboardActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_dashboard)
 
-        val fireDetected: Button = findViewById(R.id.notifIcon)
+        val fireDetected: Button = findViewById(R.id.notificationIcon)
         fireDetected.setOnClickListener {
             val intent = Intent(this, FireDetected::class.java)
             startActivity(intent)

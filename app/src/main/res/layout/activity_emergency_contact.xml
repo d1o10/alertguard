@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".MainActivity">
+    tools:context=".EmergencyContact">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -23,7 +23,7 @@
 
 
     <TextView
-        android:id="@+id/tvContactName"
+        android:id="@+id/tvContactName1"
         android:layout_width="280dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -33,7 +33,7 @@
 
 
     <TextView
-        android:id="@+id/tvContactNumber"
+        android:id="@+id/tvContactNumber1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contact Number:  09456784952"
@@ -48,7 +48,7 @@
 
 
     <TextView
-        android:id="@+id/tvContactName"
+        android:id="@+id/tvContactName2"
         android:layout_width="323dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -57,7 +57,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/tvContactNumber"
+        android:id="@+id/tvContactNumber2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contact Number: 09237895643"
@@ -71,7 +71,7 @@
         android:layout_marginTop="1dp"/>
 
     <TextView
-        android:id="@+id/tvContactName"
+        android:id="@+id/tvContactName3"
         android:layout_width="323dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
@@ -80,7 +80,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/tvContactNumber"
+        android:id="@+id/tvContactNumber3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contact Number: 09504838896"
