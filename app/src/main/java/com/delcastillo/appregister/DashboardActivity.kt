@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 
@@ -17,6 +18,13 @@ class DashboardActivity : AppCompatActivity() {
         val fireDetected: Button = findViewById(R.id.notificationIcon)
         fireDetected.setOnClickListener {
             val intent = Intent(this, FireDetected::class.java)
+            startActivity(intent)
+        }
+
+        // Find the ImageView and set the OnClickListener
+        val womanImageView: ImageView = findViewById(R.id.Woman)
+        womanImageView.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         }
     }
