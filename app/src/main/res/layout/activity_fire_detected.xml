@@ -7,6 +7,18 @@
     android:background="@color/white"
     tools:context=".FireDetected">
 
+
+    <TextView
+        android:id="@+id/DashboardText"
+        android:layout_width="wrap_content"
+        android:layout_height="131dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="40dp"
+        android:text="Dashboard"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
@@ -18,17 +30,17 @@
         android:textColor="@color/black"
         android:textSize="20dp" />
 
+
     <ImageView
-        android:id="@+id/Woman"
+        android:id="@+id/WomanFireDect"
         android:layout_width="100dp"
-        android:layout_marginTop="20dp"
         android:layout_height="70dp"
-        android:layout_toRightOf="@+id/welcomeText"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="100dp"
-        android:src="@drawable/woman"
-        />
-
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/welcomeText"
+        android:src="@drawable/woman" />
 
     <ImageView
         android:id="@+id/SafeHouse"
@@ -42,6 +54,7 @@
         android:id="@+id/houseSafeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         android:text="Fire Detected on your house"
         android:textColor="@color/red"
         android:textSize="25dp"
@@ -81,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:background="#ff5757">
+        android:background="@drawable/button3">
 
         <Button
 

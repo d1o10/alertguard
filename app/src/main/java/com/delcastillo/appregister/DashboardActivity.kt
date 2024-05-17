@@ -27,7 +27,6 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Find the ImageView and set the OnClickListener
         val womanImageView: ImageView = findViewById(R.id.Woman)
         womanImageView.setOnClickListener {
             val intent = Intent(this, Profile::class.java)
