@@ -7,16 +7,26 @@
     android:background="@color/white"
     tools:context=".FireDetected">
 
-
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="131dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="60dp"
         android:text="Welcome!"
+        android:textStyle="bold"
         android:textColor="@color/black"
-        android:textSize="30dp"
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/Woman"
+        android:layout_width="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@+id/welcomeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="100dp"
+        android:src="@drawable/woman"
         />
 
 
@@ -63,8 +73,6 @@
         android:hint="Dismiss Alert"
         android:textColorHint="@color/white"
         android:layout_gravity="center" />
-
-
 
 
     <LinearLayout

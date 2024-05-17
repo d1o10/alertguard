@@ -27,7 +27,7 @@
             android:id="@+id/loginbtn"
             android:layout_width="360dp"
             android:layout_height="50dp"
-            android:background="@drawable/button1"
+            android:backgroundTint="#ff5757"
             android:text="Log in"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -40,8 +40,8 @@
             android:layout_marginTop="50dp"
             android:textSize="20dp"
             android:text=" Sign up"
+            android:backgroundTint="#ff5757"
             android:textAlignment="center"
-            android:background="@drawable/button1"
             android:textColor="@color/white"/>
     </LinearLayout>
 

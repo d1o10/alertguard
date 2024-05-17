@@ -21,6 +21,12 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val location: Button = findViewById(R.id.locationIcon)
+        location.setOnClickListener {
+            val intent = Intent(this, Location::class.java)
+            startActivity(intent)
+        }
+
         // Find the ImageView and set the OnClickListener
         val womanImageView: ImageView = findViewById(R.id.Woman)
         womanImageView.setOnClickListener {
