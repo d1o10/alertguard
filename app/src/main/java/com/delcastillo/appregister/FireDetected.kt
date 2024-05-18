@@ -24,13 +24,13 @@ class FireDetected : AppCompatActivity() {
             startActivity(intent)
         }
 
-            val womanImageView: ImageView = findViewById(R.id.WomanFireDect)
-            womanImageView.setOnClickListener {
-                val intent = Intent(this, Profile::class.java)
-                startActivity(intent)
-            }
+        val womanImageView: ImageView = findViewById(R.id.WomanFireDect)
+        womanImageView.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
         }
     }
+}
 
 
 
