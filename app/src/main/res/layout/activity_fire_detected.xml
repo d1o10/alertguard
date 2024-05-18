@@ -12,7 +12,7 @@
         android:id="@+id/DashboardText"
         android:layout_width="wrap_content"
         android:layout_height="131dp"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="55dp"
         android:layout_marginTop="40dp"
         android:text="Dashboard"
         android:textColor="@color/black"
@@ -66,27 +66,24 @@
     <Button
         android:id="@+id/emergency"
         android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="450dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/houseSafeText"
         android:hint="Emergency Contacts"
-        android:textColorHint="@color/white"
-        android:layout_gravity="center" />
+        android:textColorHint="@color/white" />
+
 
     <Button
         android:id="@+id/dismiss"
-        android:layout_width="140dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="450dp"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/houseSafeText"
+        android:layout_toRightOf="@+id/emergency"
         android:hint="Dismiss Alert"
-        android:textColorHint="@color/white"
-        android:layout_gravity="center" />
-
+        android:textColorHint="@color/white" />
 
     <LinearLayout
         android:id="@+id/navbar"

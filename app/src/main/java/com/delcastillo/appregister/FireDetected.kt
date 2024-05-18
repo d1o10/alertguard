@@ -11,6 +11,7 @@ class FireDetected : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fire_detected)
 
+
         val location2: Button = findViewById(R.id.locationIcon)
         location2.setOnClickListener {
             val intent = Intent(this, Location::class.java)
@@ -21,6 +22,7 @@ class FireDetected : AppCompatActivity() {
         dashboard.setOnClickListener {
             val intent = Intent(this, DashboardActivity::class.java)
             startActivity(intent)
+        }
 
             val womanImageView: ImageView = findViewById(R.id.WomanFireDect)
             womanImageView.setOnClickListener {
@@ -29,6 +31,6 @@ class FireDetected : AppCompatActivity() {
             }
         }
     }
-}
+
 
 
