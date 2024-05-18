@@ -21,7 +21,11 @@ class LoginActivity : AppCompatActivity() {
             signupbtn.setOnClickListener {
                 val intent = Intent(this, RegisterActivity::class.java)
                 startActivity(intent)
-
+            }
+                val forgotpass = findViewById<Button>(R.id.forgotbtn)
+                forgotpass.setOnClickListener {
+                    val intent = Intent(this, ForgotPassword::class.java)
+                    startActivity(intent)
+                }
         }
     }
-}
