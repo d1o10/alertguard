@@ -23,10 +23,10 @@
         android:layout_height="wrap_content"
         android:text="Settings"
         android:textColor="@color/black"
-        android:textSize="28dp"
+        android:textSize="25dp"
         android:gravity="center"
         android:layout_marginTop="55dp"
-        android:layout_marginStart="105dp"
+        android:layout_marginStart="70dp"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -36,14 +36,14 @@
         android:textSize="20dp"
         android:gravity="center"
         android:layout_marginTop="120dp"
-        android:layout_marginStart="105dp"
+        android:layout_marginStart="70dp"
         />
 
     <Button
         android:id="@+id/EditProfilebtn"
         android:layout_width="340dp"
         android:layout_height="50dp"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="180dp"
         android:textColorHint="@color/black"
         android:textSize="18sp"
@@ -56,28 +56,11 @@
         android:onClick="onTextViewClicked"
         android:drawableRight="@drawable/baseline_chevron_right_24"/>
 
-    <Button
-        android:id="@+id/ChangePasswordbtn"
-        android:layout_width="340dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="240dp"
-        android:textColorHint="@color/black"
-        android:textSize="18sp"
-        android:text="Change Password"
-        android:textColor="@color/black"
-        android:drawableLeft="@drawable/profile"
-        android:layout_gravity="center"
-        android:background="@color/transpa"
-        android:clickable="true"
-        android:onClick="onTextViewClicked"
-        android:drawableRight="@drawable/baseline_chevron_right_24"/>
-
     <LinearLayout
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:layout_marginTop="295dp"
+        android:layout_marginTop="235dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="30dp"
         android:paddingLeft="20dp">
@@ -89,20 +72,21 @@
             android:text="Enable Notifications"
             android:color="@color/black"
             android:textSize="20sp"
-            android:paddingTop="15dp"/>
+            android:paddingTop="15dp"
+            android:layout_marginStart="10dp"/>
 
         <Switch
             android:id="@+id/enablenotif"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="15dp" />
+            android:paddingTop="15dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:orientation="horizontal"
-        android:layout_marginTop="360dp"
+        android:layout_marginTop="290dp"
         android:layout_marginStart="40dp"
         android:layout_marginEnd="30dp"
         android:paddingLeft="20dp">
@@ -115,7 +99,8 @@
             android:color="@color/black"
             android:paddingTop="15dp"
             android:text="Enable Location"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_marginStart="10dp" />
 
         <Switch
             android:id="@+id/sms_notifications_switch"
@@ -130,8 +115,8 @@
         android:id="@+id/helpSupport"
         android:layout_width="340dp"
         android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="420dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="350dp"
         android:textColorHint="@color/black"
         android:textSize="18sp"
         android:text="Help and Support"
@@ -147,8 +132,8 @@
         android:id="@+id/About"
         android:layout_width="340dp"
         android:layout_height="50dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="480dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="400dp"
         android:textColorHint="@color/black"
         android:textSize="18sp"
         android:text="About"

@@ -17,25 +17,27 @@
         android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
         android:paddingLeft="30dp" />
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Emergency Contacts"
         android:textColor="@color/black"
-        android:textSize="28dp"
+        android:textSize="25dp"
         android:gravity="center"
         android:layout_marginTop="55dp"
-        android:layout_marginStart="105dp"
+        android:layout_marginStart="70dp"
         />
 
     <Button
         android:id="@+id/newContactbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="70dp"
         android:layout_marginTop="120dp"
         android:paddingLeft="20dp"
-        android:text="Add New Contact" />
+        android:text="Add New Contact"
+        android:backgroundTint="#ff5757"/>
 
     <TextView
         android:id="@+id/tvContactName1"
@@ -54,8 +56,18 @@
         android:text="Contact Number: 09456784952"
         android:textSize="15sp"
         android:paddingLeft = "70dp"
-        android:layout_marginTop="210dp"
-        />
+        android:layout_marginTop="210dp"/>
+
+    <Button
+        android:id="@+id/callbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/transpa"
+        android:drawableLeft="@drawable/baseline_add_call_24"
+        android:paddingRight="5dp"
+        android:layout_alignParentEnd="true"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -83,6 +95,18 @@
         android:layout_marginTop="280dp"
         />
 
+
+    <Button
+        android:id="@+id/callbtn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="255dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/transpa"
+        android:drawableLeft="@drawable/baseline_add_call_24"
+        android:paddingRight="5dp"
+        android:layout_alignParentEnd="true"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="20dp"
@@ -109,6 +133,17 @@
         android:layout_marginTop="345dp"
         android:paddingLeft = "70dp"
         />
+
+    <Button
+        android:id="@+id/callbtn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/transpa"
+        android:drawableLeft="@drawable/baseline_add_call_24"
+        android:paddingRight="5dp"
+        android:layout_alignParentEnd="true"/>
 
 
 

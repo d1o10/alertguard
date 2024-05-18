@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelpandSupport">
+
+    <Button
+        android:id="@+id/backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@color/transpa"
+        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
+        android:paddingLeft="30dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help and Support"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="70dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut gravida quam. Duis euismod placerat elit, at vehicula ligula tempor id. Sed sagittis convallis ex, nec vehicula justo faucibus in. Proin eleifend libero et vehicula commodo. Phasellus vitae malesuada neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla nec enim vel elit suscipit facilisis. Sed consectetur neque id erat congue, id fermentum metus blandit. Integer id leo non nulla vestibulum auctor. Sed varius libero et eros fermentum, ac euismod eros vehicula. Vivamus hendrerit velit non metus viverra, id hendrerit felis eleifend. Nullam at felis at sapien viverra dapibus. Vivamus eget congue ligula. Etiam accumsan magna et ultricies blandit. Cras suscipit eros vitae vestibulum condimentum."
+        android:textSize="20sp"
+        android:gravity="start"
+        android:textAlignment="textStart"/>
+
+</RelativeLayout>
