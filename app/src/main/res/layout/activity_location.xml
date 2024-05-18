@@ -5,6 +5,7 @@
 
     <!-- ImageView starting at the very top -->
     <ImageView
+        android:id="@+id/img1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/locationmap"
@@ -28,24 +29,22 @@
         android:background="@drawable/rounder_background"
         android:paddingLeft="70dp"
         android:text="Search by address"
-
         android:textColor="#494040" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/baseline_search_24"
-        android:background="@color/transpa"
-        android:layout_marginTop="643dp"
         android:layout_marginLeft="10dp"
-        />
+        android:layout_marginTop="638dp"
+        android:background="@color/transpa"
+        android:drawableLeft="@drawable/baseline_search_24" />
 
-    <EditText
-        android:id="@+id/SearchAdd"
+    <ImageView
+        android:id="@+id/Woman"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginLeft="350dp"
-        android:layout_marginTop="650dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="645dp"
         android:background="@drawable/woman" />
 
 </RelativeLayout>
