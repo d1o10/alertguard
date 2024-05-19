@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".About">
 
     <Button
-        android:id="@+id/backbtn"
+        android:id="@+id/aboutback"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -34,6 +35,7 @@
         android:layout_marginTop="120dp"
         android:layout_marginRight="40dp"
         android:layout_marginLeft="40dp"
+        android:textColor="@color/black"
         android:text="AlertGuard is an innovative mobile application designed to provide comprehensive fire and smoke detection capabilities seamlessly integrated with SMS alerts.\nWith its cutting-edge technology, AlertGuard empowers users to monitor their surroundings for potential fire hazards and swiftly receive notifications via SMS in the event of any detected threat.\nFrom residential homes to commercial spaces, AlertGuard ensures round-the-clock safety and peace of mind, offering a robust solution to safeguard lives and property against the devastating impacts of fire emergencies."
         android:textSize="20sp"
         android:gravity="start"

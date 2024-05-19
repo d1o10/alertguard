@@ -32,6 +32,12 @@ class DashboardActivity : AppCompatActivity() {
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         }
+
+        val profilebtn: Button = findViewById(R.id.profileIcon)
+        profilebtn.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        }
     }
 
     fun onTextViewClicked(view: View) {
