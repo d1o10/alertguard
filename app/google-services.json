@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "156767126547",
+    "project_id": "alertguard-eeaa3",
+    "storage_bucket": "alertguard-eeaa3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156767126547:android:9af9b620df93caeef1abe6",
+        "android_client_info": {
+          "package_name": "com.delcastillo.appregister"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdU5OnS2Av0H9qFDHuYAlowRV80IDrKD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
