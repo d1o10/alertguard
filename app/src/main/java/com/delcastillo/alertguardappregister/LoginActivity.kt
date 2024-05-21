@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.text.InputType
+import android.view.MotionEvent
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
@@ -16,6 +18,7 @@ class LoginActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     private lateinit var sharedPreferences: SharedPreferences
+    private var isPasswordVisible: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,10 +37,33 @@ class LoginActivity : AppCompatActivity() {
         val savedEmail = sharedPreferences.getString("email", "")
         val savedPassword = sharedPreferences.getString("password", "")
         if (savedEmail != null && savedEmail.isNotEmpty() &&
-            savedPassword != null && savedPassword.isNotEmpty()) {
+            savedPassword != null && savedPassword.isNotEmpty()
+        ) {
             emailEditText.setText(savedEmail)
             passwordEditText.setText(savedPassword)
             rememberMeCheckbox.isChecked = true
+        }
+
+        passwordEditText.setOnTouchListener { _, event ->
+            if (event.action == MotionEvent.ACTION_UP) {
+                val drawableEnd = passwordEditText.compoundDrawablesRelative[2] // assuming the eye icon is on the end
+                if (drawableEnd != null && event.rawX >= (passwordEditText.right - drawableEnd.bounds.width())) {
+                    isPasswordVisible = !isPasswordVisible
+                    if (isPasswordVisible) {
+                        // Show password
+                        passwordEditText.inputType =
+                            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                    } else {
+                        // Hide password
+                        passwordEditText.inputType =
+                            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                    }
+                    // Move cursor to the end of the text after changing input type
+                    passwordEditText.setSelection(passwordEditText.text.length)
+                    return@setOnTouchListener true
+                }
+            }
+            return@setOnTouchListener false
         }
 
         loginButton.setOnClickListener {
@@ -74,23 +100,19 @@ class LoginActivity : AppCompatActivity() {
                     finish()
                 } else {
                     // If sign in fails, display a message to the user.
-                    Toast.makeText(baseContext, "Authentication failed: ${task.exception?.message}",
-                        Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        baseContext, "Authentication failed: ${task.exception?.message}",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }
 
     override fun onPause() {
         super.onPause()
-        val email = findViewById<EditText>(R.id.email).text.toString().trim()
-        val password = findViewById<EditText>(R.id.password).text.toString().trim()
-        val rememberMe = findViewById<CheckBox>(R.id.rememberMeCheckbox).isChecked
+        val email = findViewById<EditText>(R.id.email).text
 
-        if (rememberMe) {
-            val editor = sharedPreferences.edit()
-            editor.putString("email", email)
-            editor.putString("password", password)
-            editor.apply()
-        }
+
     }
 }
+

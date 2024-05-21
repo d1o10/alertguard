@@ -99,7 +99,7 @@
         android:layout_marginTop="5dp"
         android:layout_gravity="center"
         android:background="@drawable/button1"
-        android:drawableRight="@drawable/baseline_remove_red_eye_24"
+        android:drawableRight="@drawable/baseline_remove_red_eye_24_visibility"
         android:paddingRight="20dp"/>
     <Button
         android:id="@+id/regButton"

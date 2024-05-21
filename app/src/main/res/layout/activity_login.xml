@@ -28,10 +28,6 @@
         android:layout_marginTop="5dp"
         android:layout_marginStart="50dp"/>
 
-
-
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -61,16 +57,17 @@
         android:textSize="17dp"/>
 
     <EditText
-        android:id="@+id/password"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="2dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        android:background="@drawable/button1"
-        android:drawableRight="@drawable/baseline_remove_red_eye_24"
-        android:paddingRight="20dp"/>
+    android:id="@+id/password"
+    android:layout_width="300dp"
+    android:layout_height="50dp"
+    android:layout_marginStart="2dp"
+    android:textColor="@color/black"
+    android:layout_marginTop="5dp"
+    android:layout_gravity="center"
+    android:background="@drawable/button1"
+    android:drawableRight="@drawable/baseline_remove_red_eye_24_visibility" android:paddingRight="20dp"
+    android:inputType="textPassword"/>
+
 
     <LinearLayout
         android:layout_width="wrap_content"
