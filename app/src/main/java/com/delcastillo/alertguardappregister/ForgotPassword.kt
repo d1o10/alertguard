@@ -1,4 +1,4 @@
-package com.delcastillo.appregister
+package com.delcastillo.alertguardappregister
 
 import android.annotation.SuppressLint
 import android.content.Intent

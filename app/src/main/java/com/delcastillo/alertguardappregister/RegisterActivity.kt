@@ -1,4 +1,4 @@
-package com.delcastillo.appregister
+package com.delcastillo.alertguardappregister
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
