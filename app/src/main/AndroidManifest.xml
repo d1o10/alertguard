@@ -13,63 +13,53 @@
         android:theme="@style/Theme.AppRegister"
         tools:targetApi="31">
         <activity
-            android:name=".HelpandSupport"
+            android:name="com.delcastillo.alertguardappregister.HelpandSupport"
             android:exported="false" />
         <activity
-            android:name=".ForgotPassword"
+            android:name="com.delcastillo.alertguardappregister.ForgotPassword"
             android:exported="false" />
         <activity
-            android:name=".About"
+            android:name="com.delcastillo.alertguardappregister.About"
             android:exported="false" />
         <activity
-            android:name=".Location"
+            android:name="com.delcastillo.alertguardappregister.Location"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.delcastillo.alertguardappregister.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Settings"
+            android:name="com.delcastillo.alertguardappregister.Settings"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".Profile"
-            android:exported="true">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+            android:name="com.delcastillo.alertguardappregister.Profile"
+            android:exported="true" />
         <activity
-            android:name=".FireDetected"
+            android:name="com.delcastillo.alertguardappregister.FireDetected"
             android:exported="false" />
         <activity
-            android:name=".DashboardActivity"
+            android:name="com.delcastillo.alertguardappregister.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".EmergencyContact"
+            android:name="com.delcastillo.alertguardappregister.EmergencyContact"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name="com.delcastillo.alertguardappregister.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginSignupActivity"
+            android:name="com.delcastillo.alertguardappregister.LoginSignupActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.delcastillo.alertguardappregister.RegisterActivity"
             android:exported="false" />
     </application>
 

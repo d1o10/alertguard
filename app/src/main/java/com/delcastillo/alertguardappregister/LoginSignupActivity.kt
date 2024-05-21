@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import com.delcastillo.appregister.R
 
+
 class LoginSignupActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
