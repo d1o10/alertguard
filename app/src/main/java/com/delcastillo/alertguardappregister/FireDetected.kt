@@ -30,6 +30,18 @@ class FireDetected : AppCompatActivity() {
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         }
+
+        val firedetectemer: Button = findViewById(R.id.emergency)
+        firedetectemer.setOnClickListener {
+            val intent = Intent(this, EmergencyContact::class.java)
+            startActivity(intent)
+        }
+
+        val profilebtnfiredet: Button = findViewById(R.id.profileIcon)
+        profilebtnfiredet.setOnClickListener {
+            val intent = Intent(this, Profile::class.java)
+            startActivity(intent)
+        }
     }
 }
 

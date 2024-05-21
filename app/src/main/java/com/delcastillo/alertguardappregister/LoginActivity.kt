@@ -44,27 +44,29 @@ class LoginActivity : AppCompatActivity() {
             rememberMeCheckbox.isChecked = true
         }
 
-        passwordEditText.setOnTouchListener { _, event ->
+        passwordEditText.setOnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_UP) {
-                val drawableEnd = passwordEditText.compoundDrawablesRelative[2] // assuming the eye icon is on the end
+                val drawableEnd = passwordEditText.compoundDrawablesRelative[2] // assuming the eye icon is at the end
                 if (drawableEnd != null && event.rawX >= (passwordEditText.right - drawableEnd.bounds.width())) {
                     isPasswordVisible = !isPasswordVisible
                     if (isPasswordVisible) {
                         // Show password
-                        passwordEditText.inputType =
-                            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                        passwordEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+                        passwordEditText.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_remove_red_eye_24_visibility, 0)
                     } else {
                         // Hide password
-                        passwordEditText.inputType =
-                            InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                        passwordEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
+                        passwordEditText.setCompoundDrawablesRelativeWithIntrinsicBounds(0, 0, R.drawable.baseline_visibility_off_24, 0)
                     }
                     // Move cursor to the end of the text after changing input type
                     passwordEditText.setSelection(passwordEditText.text.length)
                     return@setOnTouchListener true
                 }
             }
-            return@setOnTouchListener false
+            false
         }
+
+
 
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString().trim()
