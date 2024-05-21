@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.ImageView
+import com.delcastillo.appregister.R
 
 class Location : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
