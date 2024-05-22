@@ -25,6 +25,12 @@ class Profile : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val profback: Button = findViewById(R.id.backbtnprof)
+        profback.setOnClickListener {
+            val intent = Intent(this, DashboardActivity::class.java)
+            startActivity(intent)
+        }
+
         // Log out button functionality
         val logoutBtn = findViewById<Button>(R.id.logout)
         logoutBtn.setOnClickListener {
