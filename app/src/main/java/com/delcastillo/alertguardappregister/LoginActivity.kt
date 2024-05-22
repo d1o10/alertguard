@@ -66,6 +66,12 @@ class LoginActivity : AppCompatActivity() {
             false
         }
 
+        val logsignup: Button = findViewById(R.id.Signup)
+        logsignup.setOnClickListener {
+            val intent = Intent(this, com.delcastillo.alertguardappregister.RegisterActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
         loginButton.setOnClickListener {

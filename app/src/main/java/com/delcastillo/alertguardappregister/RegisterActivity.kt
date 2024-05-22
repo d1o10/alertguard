@@ -49,6 +49,12 @@ class RegisterActivity : AppCompatActivity() {
             false
         }
 
+        val registerlog: Button = findViewById(R.id.loginAcc)
+        registerlog.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
         registerButton.setOnClickListener {
             val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
@@ -75,5 +81,7 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 }
         }
+
+
     }
 }
