@@ -88,7 +88,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/linearlayout1"
         android:layout_centerHorizontal="true"
-       android:backgroundTint="@color/transpa"
+        android:backgroundTint="@color/transpa"
         android:textColor="@color/black"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
@@ -96,16 +96,17 @@
         android:textSize="15sp" />
 
     <Button
+        android:id="@+id/logout"
         android:layout_width="320dp"
         android:layout_height="50dp"
-       android:layout_centerHorizontal="true"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/settingsprof"
         android:paddingLeft="20dp"
         android:layout_marginTop="30dp"
         android:textSize="15sp"
         android:backgroundTint="#ff5757"
         android:textColor="@color/black"
-        android:text="LOG OUT "
+        android:text="LOG OUT"
         android:layout_gravity="center"/>
 
 </RelativeLayout>

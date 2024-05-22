@@ -110,6 +110,15 @@ class LoginActivity : AppCompatActivity() {
             }
     }
 
+
+    class LoginActivity : AppCompatActivity() {
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            setContentView(R.layout.activity_login)
+            // Implement your login logic here
+        }
+    }
+
     override fun onPause() {
         super.onPause()
         val email = findViewById<EditText>(R.id.email).text
