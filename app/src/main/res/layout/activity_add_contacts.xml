@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.delcastillo.alertguardappregister.AddContacts">
+
+
+
+
+    <Button
+        android:id="@+id/backbtnemergency"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/transpa"
+        android:drawableLeft="@drawable/baseline_clear_24"
+        android:paddingLeft="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Emergency Contact"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginTop="53dp"
+        android:layout_marginStart="80dp"
+        />
+    <Button
+        android:id="@+id/newContactbtn"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="305dp"
+        android:layout_marginTop="45dp"
+        android:paddingLeft="20dp"
+        android:text="Save"
+        android:backgroundTint="#0047AB"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="18dp"
+        android:src="@drawable/user_icon"
+        android:layout_marginTop="163dp"
+        android:layout_marginStart="30dp"
+        />
+    <EditText
+        android:id="@+id/fnameContact"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="150dp"
+        android:layout_gravity="center"
+        android:hint="First name"
+        android:paddingLeft="15dp"
+        android:background="@drawable/contactbutton"
+        />
+
+
+    <EditText
+        android:id="@+id/lnameContact"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="210dp"
+        android:layout_gravity="center"
+        android:hint="Last name"
+        android:paddingLeft="15dp"
+        android:background="@drawable/contactbutton"
+        />
+
+    <EditText
+        android:id="@+id/phoneContact"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:textColor="@color/black"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="270dp"
+        android:layout_gravity="center"
+        android:hint="Phone"
+        android:paddingLeft="15dp"
+        android:background="@drawable/contactbutton"
+        />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="20dp"
+        android:src="@drawable/phoneicon"
+        android:layout_marginTop="283dp"
+        android:layout_marginStart="30dp"
+        />
+
+</RelativeLayout>

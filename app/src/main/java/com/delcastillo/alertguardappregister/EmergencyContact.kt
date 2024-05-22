@@ -16,5 +16,11 @@ class EmergencyContact : AppCompatActivity() {
             val intent = Intent(this, Profile::class.java)
             startActivity(intent)
         }
+
+        val emergencybtn: Button = findViewById(R.id.newContactbtn)
+        emergencybtn.setOnClickListener {
+            val intent = Intent(this, AddContacts::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -32,7 +32,13 @@ class Settings : AppCompatActivity() {
             val intent = Intent(this, About::class.java)
             startActivity(intent)
         }
-    
+
+
+        val editprof: Button = findViewById(R.id.editprofilebtn)
+        editprof.setOnClickListener {
+            val intent = Intent(this, EditProfile::class.java)
+            startActivity(intent)
+        }
 
         
         }
