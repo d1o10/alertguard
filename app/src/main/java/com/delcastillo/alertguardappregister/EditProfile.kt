@@ -19,7 +19,7 @@ class EditProfile : AppCompatActivity() {
 
         val xbtnprof: Button = findViewById(R.id.backbtneditprof)
         xbtnprof.setOnClickListener {
-            val intent = Intent(this, DashboardActivity::class.java)
+            val intent = Intent(this, Settings::class.java)
             startActivity(intent)
         }
 
