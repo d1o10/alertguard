@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".EmergencyContact"   >
-
+    tools:context=".EmergencyContact">
 
     <Button
         android:id="@+id/backbtn"
@@ -17,17 +16,15 @@
         android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
         android:paddingLeft="30dp" />
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Emergency Contacts"
         android:textColor="@color/black"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:gravity="center"
         android:layout_marginTop="55dp"
-        android:layout_marginStart="70dp"
-        />
+        android:layout_marginStart="70dp" />
 
     <Button
         android:id="@+id/newContactbtn"
@@ -37,114 +34,23 @@
         android:layout_marginTop="120dp"
         android:paddingLeft="20dp"
         android:text="Add New Contact"
-        android:backgroundTint="#ff5757"/>
+        android:backgroundTint="#ff5757" />
 
-    <TextView
-        android:id="@+id/tvContactName1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Name: BFP-Banilad"
-        android:textSize="15sp"
-        android:paddingLeft = "70dp"
-        android:layout_marginTop="190dp"
-        />
-
-    <TextView
-        android:id="@+id/tvContactNumber1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Number: 09456784952"
-        android:textSize="15sp"
-        android:paddingLeft = "70dp"
-        android:layout_marginTop="210dp"/>
-
-    <Button
-        android:id="@+id/callbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/transpa"
-        android:drawableLeft="@drawable/baseline_add_call_24"
-        android:paddingRight="5dp"
-        android:layout_alignParentEnd="true"/>
-
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginTop="228dp"
-        />
-
-    <TextView
-        android:id="@+id/tvContactName2"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft = "70dp"
-        android:text="Contact Name: Fretch Barbie"
-        android:textSize="15sp"
-        android:layout_marginTop="260dp"
-        />
+        android:layout_below="@id/newContactbtn"
+        android:layout_marginTop="20dp">
 
-    <TextView
-        android:id="@+id/tvContactNumber2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Number: 09237895643"
-        android:textSize="15sp"
-        android:paddingLeft = "70dp"
-        android:layout_marginTop="280dp"
-        />
+        <LinearLayout
+            android:id="@+id/contactContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-
-    <Button
-        android:id="@+id/callbtn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="255dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/transpa"
-        android:drawableLeft="@drawable/baseline_add_call_24"
-        android:paddingRight="5dp"
-        android:layout_alignParentEnd="true"/>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:layout_marginTop="300dp"
-        />
-
-
-    <TextView
-        android:id="@+id/tvContactName3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Name: Jessalyn Sadili"
-        android:textSize="15sp"
-        android:layout_marginTop="325dp"
-        android:paddingLeft = "70dp"
-        />
-
-    <TextView
-        android:id="@+id/tvContactNumber3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contact Number: 09504838896"
-        android:textSize="15sp"
-        android:layout_marginTop="345dp"
-        android:paddingLeft = "70dp"
-        />
-
-    <Button
-        android:id="@+id/callbtn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/transpa"
-        android:drawableLeft="@drawable/baseline_add_call_24"
-        android:paddingRight="5dp"
-        android:layout_alignParentEnd="true"/>
-
-
+            <!-- This LinearLayout will be populated dynamically -->
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
