@@ -3,25 +3,37 @@ package com.delcastillo.alertguardappregister
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import androidx.activity.enableEdgeToEdge
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.delcastillo.appregister.R
 
 class Profile : AppCompatActivity() {
+    private lateinit var profileImageView: ImageView
+    private lateinit var nameTextView: TextView
+    private lateinit var phoneTextView: TextView
+    private lateinit var genderTextView: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_profile)
 
-        val profilebtn = findViewById<Button>(R.id.emergency_contacts)
-        profilebtn.setOnClickListener {
-            val intent = Intent(this, EmergencyContact::class.java)
+        profileImageView = findViewById(R.id.profile_image)
+        nameTextView = findViewById(R.id.textview_name)
+        phoneTextView = findViewById(R.id.textview_phone)
+        genderTextView = findViewById(R.id.textview_gender)
+
+
+        val profilesett: Button = findViewById(R.id.settingsprof)
+        profilesett.setOnClickListener {
+            val intent = Intent(this, Settings::class.java)
             startActivity(intent)
         }
 
-        val settingsbtn = findViewById<Button>(R.id.settingsprof)
-        settingsbtn.setOnClickListener {
-            val intent = Intent(this, Settings::class.java)
+
+        val profilemerge: Button = findViewById(R.id.emergency_contacts)
+        profilemerge.setOnClickListener {
+            val intent = Intent(this, EmergencyContact::class.java)
             startActivity(intent)
         }
 
@@ -30,6 +42,7 @@ class Profile : AppCompatActivity() {
             val intent = Intent(this, DashboardActivity::class.java)
             startActivity(intent)
         }
+
 
         // Log out button functionality
         val logoutBtn = findViewById<Button>(R.id.logout)
@@ -45,3 +58,9 @@ class Profile : AppCompatActivity() {
         }
     }
 }
+
+
+
+
+
+
