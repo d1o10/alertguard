@@ -26,15 +26,16 @@
         android:layout_marginTop="55dp"
         android:layout_marginStart="70dp" />
 
+
     <Button
         android:id="@+id/newContactbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
         android:layout_marginTop="120dp"
+        android:backgroundTint="#ff5757"
         android:paddingLeft="20dp"
-        android:text="Add New Contact"
-        android:backgroundTint="#ff5757" />
+        android:text="Add New Contact" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -52,5 +53,4 @@
             <!-- This LinearLayout will be populated dynamically -->
         </LinearLayout>
     </ScrollView>
-
 </RelativeLayout>

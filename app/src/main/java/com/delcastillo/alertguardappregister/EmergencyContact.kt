@@ -25,11 +25,15 @@ class EmergencyContact : AppCompatActivity() {
             startActivity(intent)
         }
 
-        // Retrieving the data from SharedPreferences
+        loadContacts()
+    }
+
+    private fun loadContacts() {
         val sharedPreferences = getSharedPreferences("Contacts", MODE_PRIVATE)
         val allContacts = sharedPreferences.all
 
         val contactContainer = findViewById<LinearLayout>(R.id.contactContainer)
+        contactContainer.removeAllViews() // Clear existing views
 
         allContacts.keys.sorted().forEach { key ->
             if (key.startsWith("FIRST_NAME_")) {
@@ -38,11 +42,23 @@ class EmergencyContact : AppCompatActivity() {
                 val lastName = allContacts["LAST_NAME_$id"] as String
                 val phone = allContacts["PHONE_$id"] as String
 
-                val contactView = TextView(this).apply {
-                    text = "$firstName $lastName\n$phone"
-                    textSize = 16f
-                    setPadding(0, 0, 0, 20)
+                val contactView = layoutInflater.inflate(R.layout.activity_contact_item, contactContainer, false)
+                val contactDetails = contactView.findViewById<TextView>(R.id.contactDetails)
+                val deleteButton = contactView.findViewById<Button>(R.id.deleteButton)
+
+                contactDetails.text = "$firstName $lastName\n$phone"
+
+                deleteButton.setOnClickListener {
+                    val editor = sharedPreferences.edit()
+                    editor.remove("FIRST_NAME_$id")
+                    editor.remove("LAST_NAME_$id")
+                    editor.remove("PHONE_$id")
+                    editor.apply()
+
+                    // Remove the contact view from the container
+                    contactContainer.removeView(contactView)
                 }
+
                 contactContainer.addView(contactView)
             }
         }
