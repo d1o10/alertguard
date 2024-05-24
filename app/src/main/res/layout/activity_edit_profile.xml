@@ -26,10 +26,10 @@
         android:paddingLeft="30dp" />
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/edit_image_icon"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/profile_image"
         android:layout_alignBottom="@+id/profile_image"
         android:src="@drawable/editbtn"
@@ -77,8 +77,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/phone"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="16dp"
+        android:gravity="center"
+       android:layout_margin="15dp"
         android:layout_marginEnd="16dp"
         android:orientation="horizontal">
 
