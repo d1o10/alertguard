@@ -22,6 +22,7 @@ class MainScreenActivity : AppCompatActivity() {
         val dashboardFragment = DashboardFragment()
         val locationFragment = LocationFragment()
         val profileFragment = ProfileFragment()
+        val fireDetectedFragment = FireDetectedFragment()
 
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
@@ -38,7 +39,7 @@ class MainScreenActivity : AppCompatActivity() {
                     true
                 }
                 R.id.notificationIcon -> {
-                    setCurrentFragment(dashboardFragment)
+                    setCurrentFragment(fireDetectedFragment)
                     true
                 }
                 R.id.profileIcon -> {
@@ -56,5 +57,10 @@ class MainScreenActivity : AppCompatActivity() {
             replace(R.id.flFragment, fragment)
             commit()
         }
-
+    fun replaceFragment(fragment: Fragment, containerId: Int) {
+        supportFragmentManager.beginTransaction().apply {
+            replace(containerId, fragment)
+            commit()
+        }
+    }
 }

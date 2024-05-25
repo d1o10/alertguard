@@ -3,6 +3,7 @@ package com.delcastillo.alertguardappregister
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -21,9 +22,10 @@ class EmergencyContact : AppCompatActivity() {
 
         val back: Button = findViewById(R.id.backbtn)
         back.setOnClickListener {
-            val intent = Intent(this, ProfileFragment::class.java)
+            val intent = Intent(this, MainScreenActivity::class.java)
             startActivity(intent)
         }
+
 
         val emergencybtn: Button = findViewById(R.id.newContactbtn)
         emergencybtn.setOnClickListener {

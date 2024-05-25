@@ -59,7 +59,7 @@
             android:name="com.delcastillo.alertguardappregister.ProfileFragment"
             android:exported="true" />
         <activity
-            android:name="com.delcastillo.alertguardappregister.FireDetected"
+            android:name="com.delcastillo.alertguardappregister.FireDetectedFragment"
             android:exported="false" />
         <activity
             android:name="com.delcastillo.alertguardappregister.DashboardFragment"
