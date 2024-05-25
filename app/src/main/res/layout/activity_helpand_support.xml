@@ -39,7 +39,29 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut gravida quam. Duis euismod placerat elit, at vehicula ligula tempor id. Sed sagittis convallis ex, nec vehicula justo faucibus in. Proin eleifend libero et vehicula commodo. Phasellus vitae malesuada neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla nec enim vel elit suscipit facilisis. Sed consectetur neque id erat congue, id fermentum metus blandit. Integer id leo non nulla vestibulum auctor. Sed varius libero et eros fermentum, ac euismod eros vehicula. Vivamus hendrerit velit non metus viverra, id hendrerit felis eleifend. Nullam at felis at sapien viverra dapibus. Vivamus eget congue ligula. Etiam accumsan magna et ultricies blandit. Cras suscipit eros vitae vestibulum condimentum."
+            android:text="Getting Started
+Learn the basics of using our app with this quick start guide.
+
+Frequently Asked Questions (FAQs)
+Find answers to common questions about our app and its features.
+
+User Guide
+Explore detailed instructions and visual aids for using all app features.
+
+Contact Support
+Reach out to our support team via email, live chat, or phone.
+
+Community Forum
+Join discussions, ask questions, and share tips with other users.
+
+Feedback and Suggestions
+Submit your feedback and suggestions to help us improve.
+
+Updates and Announcements
+Stay informed about the latest updates and important announcements.
+
+Privacy and Security
+Understand our privacy policy and get tips to keep your account secure."
             android:textSize="20sp"
             android:textColor="@color/black"
             android:gravity="start"

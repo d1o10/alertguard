@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EditProfile"
-    android:background="#ffffff">
+    android:background="#F97405">
 
     <ImageView
         android:id="@+id/profile_image"
@@ -44,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/profile_image"
         android:layout_marginTop="20dp"
+
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:hint="First name"

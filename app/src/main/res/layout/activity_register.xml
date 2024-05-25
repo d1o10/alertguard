@@ -41,6 +41,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
             android:hint="Already Registered?"/>
 
         <Button
@@ -67,6 +68,7 @@
         android:layout_height="wrap_content"
         android:text="Email"
         android:layout_marginTop="15dp"
+        android:textColor="@color/black"
         android:layout_marginStart="65dp"
         android:textSize="17dp"/>
 
@@ -86,6 +88,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
+        android:textColor="@color/black"
         android:layout_marginTop="15dp"
         android:layout_marginStart="65dp"
         android:textSize="17dp"/>

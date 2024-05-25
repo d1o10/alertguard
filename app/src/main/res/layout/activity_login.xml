@@ -33,12 +33,15 @@
         android:layout_height="wrap_content"
         android:text="Email"
         android:layout_marginTop="15dp"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         android:layout_marginStart="65dp"
         android:textSize="17dp"/>
 
     <EditText
         android:id="@+id/email"
         android:layout_width="300dp"
+        android:hint="Enter Email"
         android:layout_height="50dp"
         android:textColor="@color/black"
         android:layout_marginStart="2dp"
@@ -53,6 +56,8 @@
         android:layout_height="wrap_content"
         android:text="Password"
         android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
         android:layout_marginStart="65dp"
         android:textSize="17dp"/>
 
@@ -61,6 +66,7 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="2dp"
+        android:hint="Password"
         android:textColor="@color/black"
         android:layout_marginTop="5dp"
         android:layout_gravity="center"
@@ -77,22 +83,25 @@
         android:orientation="horizontal">
 
         <!-- Remember Me CheckBox -->
+
         <CheckBox
             android:id="@+id/rememberMeCheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Remember Me"
-            android:textSize="10sp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"/>
+            android:text="Remember Me"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
 
         <Button
             android:id="@+id/forgotbtn"
             android:layout_width="200dp"
             android:layout_height="45dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="5dp"
             android:backgroundTint="@color/transpa"
-            android:hint="Forgot Password?" /> <!-- Adjust this margin value as needed -->
+            android:hint="Forgot Password?"
+            android:textColorHint="@color/black" /> <!-- Adjust this margin value as needed -->
     </LinearLayout>
 
 
@@ -117,6 +126,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
             android:hint="Don't have an account?"/>
 
         <Button

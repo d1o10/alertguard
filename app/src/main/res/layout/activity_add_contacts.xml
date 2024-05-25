@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="@color/white"
+    android:background="#F98E05"
     android:layout_height="match_parent"
     tools:context="com.delcastillo.alertguardappregister.AddContacts">
 
@@ -40,6 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Create Emergency Contact"
+            android:layout_marginRight="55dp"
             android:textColor="@color/black"
             android:textSize="18dp" />
     </LinearLayout>
@@ -89,6 +90,7 @@
                 android:drawableLeft="@drawable/ic_person"
                 android:drawablePadding="20dp"
                 android:hint="First name"
+                android:textColorHint="@color/black"
                 android:paddingLeft="15dp"
                 android:textColor="@color/black" />
         </LinearLayout>
@@ -106,6 +108,8 @@
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/contactbutton"
                 android:hint="Last name"
+                android:textColorHint="@color/black"
+
                 android:paddingLeft="15dp"
                 android:textColor="@color/black" />
         </LinearLayout>
@@ -124,6 +128,7 @@
                 android:background="@drawable/contactbutton"
                 android:drawableLeft="@drawable/ic_phone2"
                 android:drawablePadding="20dp"
+                android:textColorHint="@color/black"
                 android:hint="Phone"
                 android:paddingLeft="15dp"
                 android:textColor="@color/black" />

@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -66,6 +67,12 @@ class EditProfile : AppCompatActivity() {
             "Female" -> femaleRadioButton.isChecked = true
         }
 
+        val editprofback: Button = findViewById(R.id.backbtnprof)
+        editprofback.setOnClickListener {
+            val intent = Intent(this, Settings::class.java)
+            startActivity(intent)
+        }
+
         editImageIcon.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             pickImageResultLauncher.launch(intent)
@@ -105,6 +112,8 @@ class EditProfile : AppCompatActivity() {
                 }
         }
     }
+
+
 
     private fun saveProfile(uid: String, firstName: String, lastName: String, phone: String, gender: String, imageUrl: String?) {
         val userProfile = hashMapOf(

@@ -34,19 +34,19 @@ class LoginActivity : AppCompatActivity() {
         val forgotPasswordButton = findViewById<Button>(R.id.forgotbtn)
         val rememberMeCheckbox = findViewById<CheckBox>(R.id.rememberMeCheckbox)
 
+        // Load saved login details if they exist
         val savedEmail = sharedPreferences.getString("email", "")
         val savedPassword = sharedPreferences.getString("password", "")
-        if (savedEmail != null && savedEmail.isNotEmpty() &&
-            savedPassword != null && savedPassword.isNotEmpty()
-        ) {
+        if (!savedEmail.isNullOrEmpty() && !savedPassword.isNullOrEmpty()) {
             emailEditText.setText(savedEmail)
             passwordEditText.setText(savedPassword)
             rememberMeCheckbox.isChecked = true
         }
 
-        passwordEditText.setOnTouchListener { v, event ->
+        // Toggle password visibility
+        passwordEditText.setOnTouchListener { _, event ->
             if (event.action == MotionEvent.ACTION_UP) {
-                val drawableEnd = passwordEditText.compoundDrawablesRelative[2] // assuming the eye icon is at the end
+                val drawableEnd = passwordEditText.compoundDrawablesRelative[2] // Assuming the eye icon is at the end
                 if (drawableEnd != null && event.rawX >= (passwordEditText.right - drawableEnd.bounds.width())) {
                     isPasswordVisible = !isPasswordVisible
                     if (isPasswordVisible) {
@@ -66,14 +66,19 @@ class LoginActivity : AppCompatActivity() {
             false
         }
 
-        val logsignup: Button = findViewById(R.id.Signup)
-        logsignup.setOnClickListener {
-            val intent = Intent(this, com.delcastillo.alertguardappregister.RegisterActivity::class.java)
+        // Set up sign-up button
+        signUpButton.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
         }
 
+        // Set up forgot password button
+        forgotPasswordButton.setOnClickListener {
+            val intent = Intent(this, ForgotPassword::class.java)
+            startActivity(intent)
+        }
 
-
+        // Handle login button click
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
@@ -83,31 +88,32 @@ class LoginActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            signInWithEmailAndPassword(email, password)
-        }
-
-        signUpButton.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
-        }
-
-        forgotPasswordButton.setOnClickListener {
-            val intent = Intent(this, ForgotPassword::class.java)
-            startActivity(intent)
+            signInWithEmailAndPassword(email, password, rememberMeCheckbox.isChecked)
         }
     }
 
-    private fun signInWithEmailAndPassword(email: String, password: String) {
+    private fun signInWithEmailAndPassword(email: String, password: String, rememberMe: Boolean) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Sign in success, navigate to DashboardActivity
+                    if (rememberMe) {
+                        // Save login details
+                        sharedPreferences.edit().apply {
+                            putString("email", email)
+                            putString("password", password)
+                            apply()
+                        }
+                    } else {
+                        // Clear login details
+                        sharedPreferences.edit().clear().apply()
+                    }
+
                     val intent = Intent(this, MainScreenActivity::class.java)
-//                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)
                     finish()
                 } else {
-                    // If sign in fails, display a message to the user.
+                    // If sign-in fails, display a message to the user
                     Toast.makeText(
                         baseContext, "Authentication failed: ${task.exception?.message}",
                         Toast.LENGTH_SHORT
@@ -115,21 +121,4 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
     }
-
-
-    class LoginActivity : AppCompatActivity() {
-        override fun onCreate(savedInstanceState: Bundle?) {
-            super.onCreate(savedInstanceState)
-            setContentView(R.layout.activity_login)
-            // Implement your login logic here
-        }
-    }
-
-    override fun onPause() {
-        super.onPause()
-        val email = findViewById<EditText>(R.id.email).text
-
-
-    }
 }
-
