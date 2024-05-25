@@ -56,32 +56,5 @@ class MainScreenActivity : AppCompatActivity() {
             replace(R.id.flFragment, fragment)
             commit()
         }
-//        val fireDetected: Button = findViewById(R.id.notificationIcon)
-//        fireDetected.setOnClickListener {
-//            val intent = Intent(this, FireDetected::class.java)
-//            startActivity(intent)
-//        }
-//
-//        val location: Button = findViewById(R.id.locationIcon)
-//        location.setOnClickListener {
-//            val intent = Intent(this, Location::class.java)
-//            startActivity(intent)
-//        }
-//
-//        val womanImageView: ImageView = findViewById(R.id.Woman)
-//        womanImageView.setOnClickListener {
-//            val intent = Intent(this, Profile::class.java)
-//            startActivity(intent)
-//        }
-//
-//        val profilebtn: Button = findViewById(R.id.profileIcon)
-//        profilebtn.setOnClickListener {
-//            val intent = Intent(this, Profile::class.java)
-//            startActivity(intent)
-//        }
-//    }
-//
-//    fun onTextViewClicked(view: View) {
-//        Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show()
-//    }
+
 }

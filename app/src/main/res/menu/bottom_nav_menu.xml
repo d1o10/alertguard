@@ -10,7 +10,6 @@
             android:background="@color/transpa"
             android:clickable="true"
             android:icon="@drawable/ic_home"
-            android:onClick="onTextViewClicked"
             android:title="Home"/>
         <item
             android:id="@+id/locationIcon"
@@ -20,7 +19,6 @@
             android:background="@color/transpa"
             android:clickable="true"
             android:icon="@drawable/ic_loc"
-            android:onClick="onTextViewClicked"
             android:title="Location"/>
         <item
             android:id="@+id/notificationIcon"
@@ -30,7 +28,6 @@
             android:background="@color/transpa"
             android:clickable="true"
             android:icon="@drawable/baseline_doorbell_24"
-            android:onClick="onTextViewClicked"
             android:title="Notifications"/>
         <item
             android:id="@+id/profileIcon"
@@ -40,7 +37,6 @@
             android:background="@color/transpa"
             android:clickable="true"
             android:icon="@drawable/profile"
-            android:onClick="onTextViewClicked"
             android:title="Profile"/>
 
 
