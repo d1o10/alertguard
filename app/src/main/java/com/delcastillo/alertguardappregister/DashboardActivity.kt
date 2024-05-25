@@ -14,7 +14,7 @@ class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_dashboard)
+        setContentView(R.layout.fragment_dashboard)
 
         val fireDetected: Button = findViewById(R.id.notificationIcon)
         fireDetected.setOnClickListener {
