@@ -21,7 +21,7 @@ class EmergencyContact : AppCompatActivity() {
 
         val back: Button = findViewById(R.id.backbtn)
         back.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
+            val intent = Intent(this, ProfileFragment::class.java)
             startActivity(intent)
         }
 

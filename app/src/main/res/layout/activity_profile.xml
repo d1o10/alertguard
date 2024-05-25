@@ -4,7 +4,6 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile"
     android:background="#715cf8">
 
     <!-- EditText with rounded background -->
@@ -14,14 +13,7 @@
         android:layout_marginTop="190dp"
         android:background="@drawable/roundedbackground"/>
 
-    <Button
-        android:id="@+id/backbtnprof"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:background="@color/transpa"
-        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
-        android:paddingLeft="30dp" />
+
 
     <ImageView
         android:id="@+id/profile_image"

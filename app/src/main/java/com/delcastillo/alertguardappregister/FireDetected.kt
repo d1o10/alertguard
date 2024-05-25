@@ -15,19 +15,19 @@ class FireDetected : AppCompatActivity() {
 
         val location2: Button = findViewById(R.id.locationIcon)
         location2.setOnClickListener {
-            val intent = Intent(this, Location::class.java)
+            val intent = Intent(this, LocationFragment::class.java)
             startActivity(intent)
         }
 
         val dashboard: Button = findViewById(R.id.homeIcon)
         dashboard.setOnClickListener {
-            val intent = Intent(this, DashboardActivity::class.java)
+            val intent = Intent(this, DashboardFragment::class.java)
             startActivity(intent)
         }
 
         val womanImageView: ImageView = findViewById(R.id.WomanFireDect)
         womanImageView.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
+            val intent = Intent(this, ProfileFragment::class.java)
             startActivity(intent)
         }
 
@@ -39,7 +39,7 @@ class FireDetected : AppCompatActivity() {
 
         val profilebtnfiredet: Button = findViewById(R.id.profileIcon)
         profilebtnfiredet.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
+            val intent = Intent(this, ProfileFragment::class.java)
             startActivity(intent)
         }
     }

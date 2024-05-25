@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/AlertGuard"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".DashboardActivity">
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/DashboardText"
@@ -74,60 +76,5 @@
         android:textStyle="bold"
         android:textColor="@color/black"/>
 
-
-    <LinearLayout
-        android:id="@+id/navbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="@drawable/button3">
-
-        <Button
-
-            android:id="@+id/homeIcon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/transpa"
-            android:clickable="true"
-            android:drawableTop="@drawable/ic_home"
-            android:onClick="onTextViewClicked" />
-
-        <Button
-            android:id="@+id/locationIcon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/transpa"
-            android:clickable="true"
-            android:drawableTop="@drawable/ic_loc"
-            android:onClick="onTextViewClicked"/>
-
-
-        <Button
-            android:id="@+id/notificationIcon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/transpa"
-            android:clickable="true"
-            android:drawableTop="@drawable/baseline_doorbell_24"
-            android:onClick="onTextViewClicked" />
-        <Button
-            android:id="@+id/profileIcon"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/transpa"
-            android:clickable="true"
-            android:drawableTop="@drawable/profile"
-            android:onClick="onTextViewClicked" />
-
-
-
-    </LinearLayout>
-
-
-
-</RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>

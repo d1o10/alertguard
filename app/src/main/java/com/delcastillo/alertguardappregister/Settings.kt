@@ -16,7 +16,7 @@ class Settings : AppCompatActivity() {
 
         val back2: Button = findViewById(R.id.backbtn2)
         back2.setOnClickListener {
-            val intent = Intent(this, Profile::class.java)
+            val intent = Intent(this, ProfileFragment::class.java)
             startActivity(intent)
         }
 
