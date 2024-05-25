@@ -10,9 +10,13 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.delcastillo.appregister.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
 
 class EditProfile : AppCompatActivity() {
     private lateinit var profileImageView: ImageView
@@ -73,15 +77,61 @@ class EditProfile : AppCompatActivity() {
             val newPhone = phoneEditText.text.toString()
             val newGender = if (maleRadioButton.isChecked) "Male" else "Female"
 
-            val resultIntent = Intent().apply {
-                putExtra("NEW_FIRST_NAME", newFirstName)
-                putExtra("NEW_LAST_NAME", newLastName)
-                putExtra("NEW_PHONE", newPhone)
-                putExtra("NEW_GENDER", newGender)
-                imageUri?.let { putExtra("NEW_IMAGE_URI", it.toString()) }
+            val currentUser = FirebaseAuth.getInstance().currentUser
+            if (currentUser != null) {
+                val uid = currentUser.uid
+                if (imageUri != null) {
+                    uploadImageAndSaveProfile(uid, newFirstName, newLastName, newPhone, newGender)
+                } else {
+                    saveProfile(uid, newFirstName, newLastName, newPhone, newGender, null)
+                }
+            } else {
+                Toast.makeText(this, "User not logged in", Toast.LENGTH_SHORT).show()
             }
-            setResult(RESULT_OK, resultIntent)
-            finish()
         }
+    }
+
+    private fun uploadImageAndSaveProfile(uid: String, firstName: String, lastName: String, phone: String, gender: String) {
+        val storageReference = FirebaseStorage.getInstance().reference.child("profile_images/$uid.jpg")
+        imageUri?.let {
+            storageReference.putFile(it)
+                .addOnSuccessListener { taskSnapshot ->
+                    taskSnapshot.storage.downloadUrl.addOnSuccessListener { uri ->
+                        saveProfile(uid, firstName, lastName, phone, gender, uri.toString())
+                    }
+                }
+                .addOnFailureListener { e ->
+                    Toast.makeText(this, "Failed to upload image: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
+        }
+    }
+
+    private fun saveProfile(uid: String, firstName: String, lastName: String, phone: String, gender: String, imageUrl: String?) {
+        val userProfile = hashMapOf(
+            "firstName" to firstName,
+            "lastName" to lastName,
+            "phone" to phone,
+            "gender" to gender,
+            "imageUrl" to imageUrl
+        )
+
+        val db = FirebaseFirestore.getInstance()
+
+        db.collection("userprofile").document(uid).set(userProfile)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show()
+                val resultIntent = Intent().apply {
+                    putExtra("NEW_FIRST_NAME", firstName)
+                    putExtra("NEW_LAST_NAME", lastName)
+                    putExtra("NEW_PHONE", phone)
+                    putExtra("NEW_GENDER", gender)
+                    imageUrl?.let { putExtra("NEW_IMAGE_URL", it) }
+                }
+                setResult(RESULT_OK, resultIntent)
+                finish()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Failed to update profile: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
     }
 }

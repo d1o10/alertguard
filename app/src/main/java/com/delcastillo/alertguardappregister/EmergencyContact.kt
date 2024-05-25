@@ -5,14 +5,19 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.firestore.FirebaseFirestore
 import com.delcastillo.appregister.R
 
-
 class EmergencyContact : AppCompatActivity() {
+    private lateinit var db: FirebaseFirestore
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_emergency_contact)
+
+        db = FirebaseFirestore.getInstance()
 
         val back: Button = findViewById(R.id.backbtn)
         back.setOnClickListener {
@@ -30,38 +35,40 @@ class EmergencyContact : AppCompatActivity() {
     }
 
     private fun loadContacts() {
-        val sharedPreferences = getSharedPreferences("Contacts", MODE_PRIVATE)
-        val allContacts = sharedPreferences.all
-
         val contactContainer = findViewById<LinearLayout>(R.id.contactContainer)
         contactContainer.removeAllViews() // Clear existing views
 
-        allContacts.keys.sorted().forEach { key ->
-            if (key.startsWith("FIRST_NAME_")) {
-                val id = key.removePrefix("FIRST_NAME_")
-                val firstName = allContacts[key] as String
-                val lastName = allContacts["LAST_NAME_$id"] as String
-                val phone = allContacts["PHONE_$id"] as String
+        db.collection("contacts")
+            .get()
+            .addOnSuccessListener { result ->
+                for (document in result) {
+                    val firstName = document.getString("firstName") ?: ""
+                    val lastName = document.getString("lastName") ?: ""
+                    val phone = document.getString("phone") ?: ""
 
-                val contactView = layoutInflater.inflate(R.layout.activity_contact_item, contactContainer, false)
-                val contactDetails = contactView.findViewById<TextView>(R.id.contactDetails)
-                val deleteButton = contactView.findViewById<Button>(R.id.deleteButton)
+                    val contactView = layoutInflater.inflate(R.layout.activity_contact_item, contactContainer, false)
+                    val contactDetails = contactView.findViewById<TextView>(R.id.contactDetails)
+                    val deleteButton = contactView.findViewById<Button>(R.id.deleteButton)
 
-                contactDetails.text = "$firstName $lastName\n$phone"
+                    contactDetails.text = "$firstName $lastName\n$phone"
 
-                deleteButton.setOnClickListener {
-                    val editor = sharedPreferences.edit()
-                    editor.remove("FIRST_NAME_$id")
-                    editor.remove("LAST_NAME_$id")
-                    editor.remove("PHONE_$id")
-                    editor.apply()
+                    deleteButton.setOnClickListener {
+                        db.collection("contacts").document(document.id)
+                            .delete()
+                            .addOnSuccessListener {
+                                Toast.makeText(this, "Contact deleted", Toast.LENGTH_SHORT).show()
+                                contactContainer.removeView(contactView)
+                            }
+                            .addOnFailureListener { e ->
+                                Toast.makeText(this, "Error deleting contact: ${e.message}", Toast.LENGTH_SHORT).show()
+                            }
+                    }
 
-                    // Remove the contact view from the container
-                    contactContainer.removeView(contactView)
+                    contactContainer.addView(contactView)
                 }
-
-                contactContainer.addView(contactView)
             }
-        }
+            .addOnFailureListener { exception ->
+                Toast.makeText(this, "Error loading contacts: ${exception.message}", Toast.LENGTH_SHORT).show()
+            }
     }
 }
