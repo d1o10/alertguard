@@ -20,18 +20,7 @@ class Settings : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val helpsup: Button = findViewById(R.id.helpSupport)
-        helpsup.setOnClickListener {
-            val intent = Intent(this, HelpandSupport::class.java)
-            startActivity(intent)
-        }
 
-
-        val aboutbt: Button = findViewById(R.id.About)
-        aboutbt.setOnClickListener {
-            val intent = Intent(this, About::class.java)
-            startActivity(intent)
-        }
 
 
         val editprof: Button = findViewById(R.id.editprofilebtn)

@@ -1,0 +1,6 @@
+<!-- res/drawable/semi_transparent_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#66B3B3B3" />
+    <!-- #B3B3B3B3 is an ARGB color code where B3 is the alpha (transparency) and B3B3B3 is the grey color -->
+    <corners android:radius="4dp" />
+</shape>

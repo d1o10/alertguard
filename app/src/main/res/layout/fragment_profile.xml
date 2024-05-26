@@ -1,127 +1,235 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#715cf8">
+    tools:context=".Profile"
+    android:background="@color/white">
 
-    <RelativeLayout
+    <Button
+        android:id="@+id/backbtnprof"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@color/transpa"
+        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
+        android:paddingLeft="30dp" />
+
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:src="@drawable/woman"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"/>
+
+
+    <TextView
+        android:id="@+id/textview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:text="Jessalyn Sadili"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textview_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_centerHorizontal="true"
+        android:textColorHint="@color/black"
+        android:hint="Phone: +639522334456"
+        android:textSize="15sp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/textview_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:text="Gender: Female"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/generalSettings"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <!-- EditText with rounded background -->
-        <EditText
-            android:layout_width="500dp"
-            android:layout_height="600dp"
-            android:layout_marginTop="190dp"
-            android:background="@drawable/roundedbackground" />
+        android:layout_height="30dp"
+        android:layout_below="@id/textview_phone"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/semitranspa"
+        android:paddingLeft="40dp"
+        android:hint="General"
+        />
+
+    <!--    SMS NOTIFICATIONS-->
 
 
-        <ImageView
-            android:id="@+id/profile_image"
-            android:layout_width="160dp"
-            android:layout_height="130dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="120dp"
-            android:src="@drawable/woman" />
+    <!--    Emergency Contacts-->
 
-        <TextView
-            android:id="@+id/textview_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="260dp"
-            android:text="Jessalyn Sadili"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
+    <Button
+        android:id="@+id/Switches"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="SMS Notifications"
+        android:layout_marginRight="90dp"
+        android:textColor="@color/black"
+        android:layout_below="@id/generalSettings"
+        android:layout_marginTop="0dp"
+        android:background="@color/transpa"
+        android:orientation="horizontal"/>
 
-        <TextView
-            android:id="@+id/textview_phone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="300dp"
-            android:text="Phone: +639522334456"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/generalSettings"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/sms_icon"
+        android:text="EMERGENCY CONTACTS" />
 
-        <TextView
-            android:id="@+id/textview_gender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="340dp"
-            android:text="Gender: Female"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/emergency_contacts"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="370dp"
-            android:background="@color/transpa"
-            android:clickable="true"
-            android:drawableLeft="@drawable/baseline_emergency_24"
-            android:drawableRight="@drawable/baseline_chevron_right_24"
-            android:onClick="onTextViewClicked"
-            android:text="EMERGENCY CONTACTS"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:textSize="15sp" />
 
-        <LinearLayout
-            android:id="@+id/linearlayout1"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_below="@id/emergency_contacts"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingTop="15dp"
-                android:text="SMS Notifications"
-                android:textSize="20sp" />
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/contactsp"
+        android:layout_below="@id/Switches"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        />
+    <Button
+        android:id="@+id/emergency_contacts"
+        android:layout_width="460dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-60dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/transpa"
+        android:clickable="true"
+        android:onClick="onTextViewClicked"
+        android:text="EMERGENCY CONTACTS"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="13sp"
+        android:layout_below="@id/Switches"
+        />
 
-            <Switch
-                android:id="@+id/sms_notifications_switch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingTop="15dp" />
-        </LinearLayout>
+    <!--    SETTINGS-->
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ic_settings"
+        android:layout_below="@id/emergency_contacts"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        />
 
-        <Button
-            android:id="@+id/settingsprof"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/linearlayout1"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="@color/transpa"
-            android:text="SETTINGS"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
 
-        <Button
-            android:id="@+id/logout"
-            android:layout_width="320dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/settingsprof"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:backgroundTint="#ff5757"
-            android:paddingLeft="20dp"
-            android:text="LOG OUT"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
-    </RelativeLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/settingsprof"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/emergency_contacts"
+        android:layout_marginStart="-190dp"
+        android:layout_marginTop="-1dp"
+        android:background="@color/transpa"
+        android:text="SETTINGS"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/settingsprof"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/semitranspa"
+        android:paddingLeft="40dp"
+        android:hint="Info"
+        />
+
+    <!--    About-->
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/about"
+        android:layout_below="@id/info"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/About"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/info"
+        android:layout_marginStart="-200dp"
+        android:layout_marginTop="-1dp"
+        android:background="@color/transpa"
+        android:text="About"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="15sp" />
+
+
+    <!--    HelpSupport-->
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/help"
+        android:layout_below="@id/About"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"/>
+
+
+    <!--    Logout-->
+
+    <Button
+        android:id="@+id/helpSupport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/About"
+        android:layout_marginStart="-120dp"
+        android:layout_marginTop="-2dp"
+        android:background="@color/transpa"
+        android:text="Help and Support"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/logout"
+        android:layout_below="@id/helpSupport"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"/>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/helpSupport"
+        android:layout_marginStart="-190dp"
+        android:layout_marginTop="-1dp"
+        android:background="@color/transpa"
+        android:text="Log out"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="15sp" />
+
+
+
+
+
+</RelativeLayout>

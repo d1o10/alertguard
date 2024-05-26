@@ -40,30 +40,43 @@ class ProfileFragment : Fragment() {
 
         fetchUserProfile()
 
+        val helpsup: Button = view.findViewById(R.id.helpSupport)
+        helpsup.setOnClickListener {
+            val intent = Intent(requireContext(), HelpandSupport::class.java)
+            startActivity(intent)
+        }
+
+        val aboutbt: Button = view.findViewById(R.id.About)
+        aboutbt.setOnClickListener {
+            val intent = Intent(requireContext(), About::class.java)
+            startActivity(intent)
+        }
+
         val profilesett: Button = view.findViewById(R.id.settingsprof)
         profilesett.setOnClickListener {
             // Handle click event for settings button
             // Example: Navigate to Settings activity
-             val intent = Intent(requireContext(), Settings::class.java)
-             startActivity(intent)
+            val intent = Intent(requireContext(), Settings::class.java)
+            startActivity(intent)
         }
 
         val profilemerge: Button = view.findViewById(R.id.emergency_contacts)
         profilemerge.setOnClickListener {
             // Handle click event for emergency contacts button
             // Example: Navigate to EmergencyContact activity
-             val intent = Intent(requireContext(), EmergencyContact::class.java)
-             startActivity(intent)
+            val intent = Intent(requireContext(), EmergencyContact::class.java)
+            startActivity(intent)
         }
 
         val logoutBtn = view.findViewById<Button>(R.id.logout)
         logoutBtn.setOnClickListener {
             // Handle click event for logout button
             // Example: Logout user and navigate to LoginActivity
-             val intent = Intent(requireContext(), LoginActivity::class.java)
-             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-             startActivity(intent)
-             requireActivity().finish()
+            auth.signOut()
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+            requireActivity().finish()
         }
 
         return view

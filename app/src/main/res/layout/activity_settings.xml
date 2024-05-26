@@ -111,39 +111,5 @@
 
 
 
-    <Button
-        android:id="@+id/helpSupport"
-        android:layout_width="340dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="350dp"
-        android:textColorHint="@color/black"
-        android:textSize="18sp"
-        android:text="Help and Support"
-        android:textColor="@color/black"
-        android:drawableLeft="@drawable/profile"
-        android:layout_gravity="center"
-        android:background="@color/transpa"
-        android:clickable="true"
-        android:onClick="onTextViewClicked"
-        android:drawableRight="@drawable/baseline_chevron_right_24"/>
-
-    <Button
-        android:id="@+id/About"
-        android:layout_width="340dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="400dp"
-        android:textColorHint="@color/black"
-        android:textSize="18sp"
-        android:text="About"
-        android:textColor="@color/black"
-        android:drawableLeft="@drawable/profile"
-        android:layout_gravity="center"
-        android:background="@color/transpa"
-        android:clickable="true"
-        android:onClick="onTextViewClicked"
-        android:drawableRight="@drawable/baseline_chevron_right_24"/>
-
 
 </RelativeLayout>
