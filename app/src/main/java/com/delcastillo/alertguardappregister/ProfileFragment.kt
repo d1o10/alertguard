@@ -99,7 +99,7 @@ class ProfileFragment : Fragment() {
                     genderTextView.text = "Gender: $gender"
 
                     if (!imageUrl.isNullOrEmpty()) {
-                        loadProfileImage(imageUrl) // Load profile image
+                        loadProfileImage(imageUrl)
                     } else {
                         Log.e("Profile", "Image URL is null or empty")
                     }
@@ -109,7 +109,6 @@ class ProfileFragment : Fragment() {
                 Log.e("Profile", "Error fetching profile", exception)
             }
     }
-
 
     private fun loadProfileImage(imageUrl: String) {
         val storageRef = storage.reference.child(imageUrl)

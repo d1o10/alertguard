@@ -14,14 +14,6 @@ class Settings : AppCompatActivity() {
         setContentView(R.layout.activity_settings)
 
 
-        val back2: Button = findViewById(R.id.backbtn2)
-        back2.setOnClickListener {
-            val intent = Intent(this, ProfileFragment::class.java)
-            startActivity(intent)
-        }
-
-
-
 
         val editprofbtn: Button = findViewById(R.id.editprof)
         editprofbtn.setOnClickListener {
