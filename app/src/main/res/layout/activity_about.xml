@@ -1,47 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".About">
 
-    <Button
-        android:id="@+id/aboutback"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:background="@color/transpa"
-        android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
-        android:paddingLeft="30dp" />
+        android:layout_marginTop="35dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
+        <ImageButton
+            android:id="@+id/aboutback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <TextView
-        android:layout_width="wrap_content"
+            android:background="@color/transpa"
+            android:paddingLeft="30dp"
+            android:src="@drawable/baseline_arrow_back_ios_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="About"
-        android:textColor="@color/black"
-        android:textSize="25dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
-        android:layout_marginTop="55dp"
-        android:layout_marginStart="70dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
 
-    <TextView
-        android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="About"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginLeft="40dp"
-        android:textColor="@color/black"
-        android:text="AlertGuard is an innovative mobile application designed to provide comprehensive fire and smoke detection capabilities seamlessly integrated with SMS alerts.\nWith its cutting-edge technology, AlertGuard empowers users to monitor their surroundings for potential fire hazards and swiftly receive notifications via SMS in the event of any detected threat.\nFrom residential homes to commercial spaces, AlertGuard ensures round-the-clock safety and peace of mind, offering a robust solution to safeguard lives and property against the devastating impacts of fire emergencies."
-        android:textSize="20sp"
-        android:gravity="start"
-        android:textAlignment="textStart"/>
+        android:layout_margin="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="AlertGuard is an innovative mobile application designed to provide comprehensive fire and smoke detection capabilities seamlessly integrated with SMS alerts.\nWith its cutting-edge technology, AlertGuard empowers users to monitor their surroundings for potential fire hazards and swiftly receive notifications via SMS in the event of any detected threat.\nFrom residential homes to commercial spaces, AlertGuard ensures round-the-clock safety and peace of mind, offering a robust solution to safeguard lives and property against the devastating impacts of fire emergencies."
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
 
 
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
