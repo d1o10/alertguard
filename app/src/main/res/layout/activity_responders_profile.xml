@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile"
+    tools:context="com.delcastillo.alertguardappregister.RespondersDashboard"
     android:background="@color/white">
 
     <Button
@@ -22,7 +22,7 @@
         android:id="@+id/profile_image"
         android:layout_width="120dp"
         android:layout_height="80dp"
-        android:src="@drawable/img_5"
+        android:src="@drawable/firefighter"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="120dp"/>
 
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
-        android:text="null"
+        android:text="John Doe"
         android:textSize="20sp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="250dp"
-        android:text="Gender: Unknown"
+        android:text="Gender: Male"
         android:textColor="@color/black"
         android:textSize="15sp" />
 
@@ -167,27 +167,27 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"/>
 
-
-    <!--    HelpSupport-->
-
     <Button
-        android:id="@+id/About"
+        android:id="@+id/Aboutbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/info"
         android:layout_marginStart="-200dp"
-        android:layout_marginTop="-2dp"
+        android:layout_marginTop="-1dp"
         android:background="@color/transpa"
         android:text="About"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="15sp" />
 
+
+    <!--    HelpSupport-->
+
     <ImageView
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:background="@drawable/help"
-        android:layout_below="@id/About"
+        android:layout_below="@id/Aboutbtn"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"/>
 
@@ -198,7 +198,7 @@
         android:id="@+id/helpSupport"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/About"
+        android:layout_below="@+id/Aboutbtn"
         android:layout_marginStart="-120dp"
         android:layout_marginTop="-2dp"
         android:background="@color/transpa"

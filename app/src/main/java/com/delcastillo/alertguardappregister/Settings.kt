@@ -16,15 +16,15 @@ class Settings : AppCompatActivity() {
 
         val back2: Button = findViewById(R.id.backbtn2)
         back2.setOnClickListener {
-            val intent = Intent(this, MainScreenActivity::class.java)
+            val intent = Intent(this, ProfileFragment::class.java)
             startActivity(intent)
         }
 
 
 
 
-        val editprof: Button = findViewById(R.id.editprofilebtn)
-        editprof.setOnClickListener {
+        val editprofbtn: Button = findViewById(R.id.editprof)
+        editprofbtn.setOnClickListener {
             val intent = Intent(this, EditProfile::class.java)
             startActivity(intent)
         }

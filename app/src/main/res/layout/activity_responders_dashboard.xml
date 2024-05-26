@@ -1,0 +1,342 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".RespondersDashboard">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="1dp"
+        android:background="@drawable/button3"
+        android:layout_marginTop="-10dp">
+
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:src="@drawable/loggn"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AlertGuard"
+            android:textSize="28sp"
+            android:paddingStart="4dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="end">
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Emergency Alerts Panel -->
+
+    <!-- Navigation Bar -->
+
+    <TextView
+        android:id="@+id/emergencyAlertsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerSection"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-14dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="8dp"
+        android:text="Emergency Alerts"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <ScrollView
+        android:id="@+id/alertsScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/navbar"
+        android:layout_below="@id/emergencyAlertsTitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Sample Alert Card -->
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/semitranspa"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Alert: Fire Detected"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Location: J.panis St"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Time: 12:34 PM"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="View Details"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Acknowledge"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Navigate"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Second Alert Card -->
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/semitranspa"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:padding="8dp">
+
+                <!-- Alert Details -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Alert: Fire Detected"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <!-- Location -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Location: 123 Main St"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+
+                <!-- Time -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Time: 10:34 PM"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+
+                <!-- Action Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="View Details"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Acknowledge"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Navigate"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Third Alert Card -->
+            <LinearLayout
+                android:layout_width="380dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/semitranspa"
+                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:padding="8dp">
+
+                <!-- Alert Details -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Alert: Fire Detected"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <!-- Location -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Location: SB Cabahug St"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+
+                <!-- Time -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="Time: 2:34 PM"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16sp" />
+
+                <!-- Action Buttons -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="View Details"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Acknowledge"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Navigate"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:background="@drawable/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-10dp">
+
+        <Button
+            android:id="@+id/homeIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transpa"
+            android:clickable="true"
+            android:drawableTop="@drawable/ic_home"
+            android:onClick="onTextViewClicked"
+            android:text="Home"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/locationIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transpa"
+            android:clickable="true"
+            android:drawableTop="@drawable/ic_loc"
+            android:onClick="onTextViewClicked"
+            android:text="Location"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/notificationIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transpa"
+            android:clickable="true"
+            android:drawableTop="@drawable/baseline_doorbell_24"
+            android:onClick="onTextViewClicked"
+            android:text="Notification"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/profileIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transpa"
+            android:clickable="true"
+            android:drawableTop="@drawable/profile"
+            android:onClick="onTextViewClicked"
+            android:text="Profile"
+            android:textSize="10sp" />
+    </LinearLayout>
+</RelativeLayout>

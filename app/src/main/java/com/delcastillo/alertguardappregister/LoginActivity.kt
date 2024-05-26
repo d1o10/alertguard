@@ -19,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var sharedPreferences: SharedPreferences
     private var isPasswordVisible: Boolean = false
+    private var userType: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,12 +28,15 @@ class LoginActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         sharedPreferences = getSharedPreferences("loginPrefs", Context.MODE_PRIVATE)
 
+        // Retrieve user type from intent
+        userType = intent.getStringExtra("USER_TYPE")
+
         val emailEditText = findViewById<EditText>(R.id.email)
         val passwordEditText = findViewById<EditText>(R.id.password)
         val loginButton = findViewById<Button>(R.id.loginAcc)
         val signUpButton = findViewById<Button>(R.id.Signup)
         val forgotPasswordButton = findViewById<Button>(R.id.forgotbtn)
-        val rememberMeCheckbox = findViewById<CheckBox>(R.id.rememberMeCheckbox)
+        val rememberMeCheckbox = findViewById<CheckBox>(R.id.remembermeCheckbox)
 
         // Load saved login details if they exist
         val savedEmail = sharedPreferences.getString("email", "")
@@ -96,7 +100,7 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, navigate to DashboardActivity
+                    // Sign in success, navigate to the appropriate dashboard based on user type
                     if (rememberMe) {
                         // Save login details
                         sharedPreferences.edit().apply {
@@ -109,7 +113,11 @@ class LoginActivity : AppCompatActivity() {
                         sharedPreferences.edit().clear().apply()
                     }
 
-                    val intent = Intent(this, MainScreenActivity::class.java)
+                    val intent = if (userType == "RESPONDER") {
+                        Intent(this, RespondersDashboard::class.java)
+                    } else {
+                        Intent(this, MainScreenActivity::class.java)
+                    }
                     startActivity(intent)
                     finish()
                 } else {

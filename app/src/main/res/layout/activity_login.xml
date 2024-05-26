@@ -85,7 +85,7 @@
         <!-- Remember Me CheckBox -->
 
         <CheckBox
-            android:id="@+id/rememberMeCheckbox"
+            android:id="@+id/remembermeCheckbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"

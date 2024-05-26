@@ -14,7 +14,7 @@ class HelpandSupport : AppCompatActivity() {
 
         val backhelp = findViewById<Button>(R.id.backbtnhelp)
         backhelp.setOnClickListener {
-            val intent = Intent(this, Settings::class.java)
+            val intent = Intent(this, ProfileFragment::class.java)
             startActivity(intent)
 
             }

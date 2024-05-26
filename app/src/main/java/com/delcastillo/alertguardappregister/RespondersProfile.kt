@@ -16,7 +16,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.storage.FirebaseStorage
 import com.bumptech.glide.Glide
 
-class ProfileFragment : Fragment() {
+class RespondersProfile : Fragment() {
     private lateinit var profileImageView: ImageView
     private lateinit var nameTextView: TextView
     private lateinit var phoneTextView: TextView
@@ -99,7 +99,7 @@ class ProfileFragment : Fragment() {
                     genderTextView.text = "Gender: $gender"
 
                     if (!imageUrl.isNullOrEmpty()) {
-                        loadProfileImage(imageUrl) // Load profile image
+                        loadProfileImage(imageUrl)
                     } else {
                         Log.e("Profile", "Image URL is null or empty")
                     }
@@ -109,7 +109,6 @@ class ProfileFragment : Fragment() {
                 Log.e("Profile", "Error fetching profile", exception)
             }
     }
-
 
     private fun loadProfileImage(imageUrl: String) {
         val storageRef = storage.reference.child(imageUrl)

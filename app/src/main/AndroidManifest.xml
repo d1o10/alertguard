@@ -16,6 +16,12 @@
         android:theme="@style/Theme.AppRegister"
         tools:targetApi="31">
         <activity
+            android:name="com.delcastillo.alertguardappregister.RespondersProfile"
+            android:exported="false" />
+        <activity
+            android:name="com.delcastillo.alertguardappregister.RespondersDashboard"
+            android:exported="false" />
+        <activity
             android:name="com.delcastillo.alertguardappregister.SelectUser"
             android:exported="false" />
         <activity
@@ -74,9 +80,6 @@
             android:exported="false" />
         <activity
             android:name="com.delcastillo.alertguardappregister.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.delcastillo.alertguardappregister.LoginSignupActivity"
             android:exported="false" />
         <activity
             android:name="com.delcastillo.alertguardappregister.RegisterActivity"

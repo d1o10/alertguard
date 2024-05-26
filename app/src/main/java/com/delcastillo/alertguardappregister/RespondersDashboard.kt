@@ -10,16 +10,21 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.delcastillo.appregister.R
 
-class About : AppCompatActivity() {
+class RespondersDashboard : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_responders_dashboard)
 
 
-        val backabout = findViewById<ImageButton>(R.id.aboutback)
-        backabout.setOnClickListener {
-            val intent = Intent(this, ProfileFragment::class.java)
+
+        val responderprof: Button = findViewById(R.id.profileIcon)
+        responderprof.setOnClickListener {
+            val intent = Intent(this, RespondersProfile::class.java)
             startActivity(intent)
         }
+
     }
+
+
 }

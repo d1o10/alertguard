@@ -45,7 +45,7 @@ class EditProfile : AppCompatActivity() {
         setContentView(R.layout.activity_edit_profile)
 
         profileImageView = findViewById(R.id.profile_image)
-        val editImageIcon: ImageView = findViewById(R.id.edit_image_icon)
+        val editImageIcon: ImageButton = findViewById(R.id.edit_image_icon)
         firstNameEditText = findViewById(R.id.first_name)
         lastNameEditText = findViewById(R.id.last_name)
         phoneEditText = findViewById(R.id.phone)
@@ -67,16 +67,14 @@ class EditProfile : AppCompatActivity() {
             "Female" -> femaleRadioButton.isChecked = true
         }
 
-        val editprofback: Button = findViewById(R.id.backbtnprof)
-        editprofback.setOnClickListener {
-            val intent = Intent(this, Settings::class.java)
-            startActivity(intent)
-        }
+
 
         editImageIcon.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             pickImageResultLauncher.launch(intent)
         }
+
+
 
         saveButton.setOnClickListener {
             val newFirstName = firstNameEditText.text.toString()
