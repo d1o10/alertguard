@@ -23,7 +23,7 @@ class FireDetectedFragment : Fragment(R.layout.fragment_fire_detected) {
         }
 
         // Find the ImageView
-        val womanImageView: ImageView = view.findViewById(R.id.WomanFireDect)
+        val womanImageView: ImageView = view.findViewById(R.id.Woman)
 
         womanImageView.setOnClickListener {
             val mainScreenActivity = requireActivity() as? MainScreenActivity

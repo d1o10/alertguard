@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
     <!-- ImageView starting at the very top -->
+
     <ImageView
         android:id="@+id/img1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/locationmap"
+        android:layout_height="600dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
         android:scaleType="centerCrop"
-        android:layout_alignParentTop="true"/>
+        android:src="@drawable/locationmap" />
 
     <Button
         android:id="@+id/locationbackbtn"
@@ -20,18 +20,20 @@
         android:layout_height="wrap_content"
         android:background="@color/transpa"
         android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:paddingLeft="30dp"
         />
 
+
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="600dp"
-        android:background="@drawable/rounder_background"
-        android:paddingLeft="70dp"
-        android:text="Search by address"
-        android:textColor="#494040" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
+        android:layout_marginTop="650dp"
+        android:layout_marginStart="80dp"
+        android:background="@color/transpa"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -48,5 +50,5 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="645dp"
         android:background="@drawable/woman" />
+
 </RelativeLayout>
-</FrameLayout>
