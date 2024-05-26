@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         // Delay for 3 seconds (3000 milliseconds) and then start LoginSignupActivity
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, LoginSignupActivity::class.java)
+            val intent = Intent(this, SelectUser::class.java)
             startActivity(intent)
             finish()  // Close the MainActivity
         }, 3000)  // 3000 milliseconds delay

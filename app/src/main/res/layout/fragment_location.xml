@@ -43,12 +43,5 @@
         android:background="@color/transpa"
         android:drawableLeft="@drawable/baseline_search_24" />
 
-    <ImageView
-        android:id="@+id/Woman"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="645dp"
-        android:background="@drawable/woman" />
 
 </RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".SelectUser">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECT USER TYPE"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:textStyle="bold"
+        />
+
+
+
+    <EditText
+        android:id="@+id/centerbox"
+        android:layout_width="320dp"
+        android:layout_height="220dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="249dp"
+        android:background="@color/transpa"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:src="@drawable/userole"
+        android:layout_marginTop="330dp"
+        android:layout_marginStart="70dp"
+        />
+
+
+
+    <Button
+        android:id="@+id/selectuserbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User"
+        android:backgroundTint="#ff5757"
+        android:textColor="@color/black"
+        android:layout_marginTop="420dp"
+        android:layout_marginStart="70dp"
+        />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:src="@drawable/responders"
+        android:layout_marginTop="330dp"
+        android:layout_marginStart="200dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#ff5757"
+        android:text="Responder"
+        android:textColor="@color/black"
+        android:layout_marginTop="420dp"
+        android:layout_marginStart="190dp"
+        />
+
+
+
+</RelativeLayout>
