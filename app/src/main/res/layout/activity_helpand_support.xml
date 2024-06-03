@@ -19,13 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
-        <Button
-            android:id="@+id/backbtnhelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/transpa"
-            android:drawableLeft="@drawable/baseline_arrow_back_ios_24"
-            android:paddingLeft="30dp" />
+
     </LinearLayout>
 
     <LinearLayout
