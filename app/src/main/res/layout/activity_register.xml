@@ -74,6 +74,7 @@
 
     <EditText
         android:id="@+id/email"
+        android:paddingLeft="10dp"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="2dp"
@@ -97,14 +98,15 @@
         android:id="@+id/password"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:textColor="@color/black"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="5dp"
         android:layout_gravity="center"
+        android:layout_marginStart="2dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/button1"
         android:drawableEnd="@drawable/baseline_visibility_off_24"
+        android:inputType="textPassword"
         android:paddingEnd="20dp"
-        android:inputType="textPassword"/>
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/regButton"

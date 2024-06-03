@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:background="#F98E05"
+    android:background="#FA9C03"
     android:layout_height="match_parent"
     tools:context="com.delcastillo.alertguardappregister.AddContacts">
 
@@ -106,6 +106,7 @@
                 android:layout_width="300dp"
                 android:layout_height="40dp"
                 android:layout_centerHorizontal="true"
+                android:drawableLeft="@drawable/ic_person"
                 android:background="@drawable/contactbutton"
                 android:hint="Last name"
                 android:textColorHint="@color/black"

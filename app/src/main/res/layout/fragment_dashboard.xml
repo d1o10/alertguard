@@ -25,7 +25,7 @@
                 android:layout_toRightOf="@+id/alertText"
                 android:layout_centerHorizontal="true"
                 android:layout_marginStart="320dp"
-                android:src="@drawable/woman" />
+                android:src="@drawable/profile" />
         </LinearLayout>
 
         <ImageView
